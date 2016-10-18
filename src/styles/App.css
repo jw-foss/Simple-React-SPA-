@@ -1,0 +1,37 @@
+/* Base Application Styles */
+ body{
+    margin:0;
+    padding:0;
+ }
+ hr {
+	margin-top:0px;
+	margin-bottom:15px;
+}
+span {
+	font-height:10px;
+}
+a:hover {
+	text-decoration: none;
+}
+ .article {
+ 	height:200px;
+ 	width:60%;
+ 	margin:0 auto;
+ }
+ .article h2 {
+ 	text-align: center;
+ }
+
+ .article p {
+    position:relative;
+    line-height:1.5em;
+    height:4.5em;
+    overflow:hidden;
+}
+ .article p:after {
+    content:"...";
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding: 0 5px;
+}
