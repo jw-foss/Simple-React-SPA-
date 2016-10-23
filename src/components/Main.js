@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from './solid/navbar';
-import Footbar from './solid/footbar';
+
 
 class AppComponent extends React.Component {
   render() {
     return (
       <div>
- 		<Navbar />
+ 		<Navbar location={this.props.location}/>
  		<div className="container-fluid">
  		  <div className="row">
  		  	<div className="col-lg-12">
@@ -14,7 +14,6 @@ class AppComponent extends React.Component {
  		  	</div>
  		  </div>
  		</div>
- 		<Footbar />
       </div>
     );
   }

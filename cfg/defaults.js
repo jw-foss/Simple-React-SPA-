@@ -21,6 +21,10 @@ function getDefaultModules() {
         test: /\.(js|jsx)$/,
         include: srcPath,
         loader: 'eslint-loader'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ],
     loaders: [
@@ -51,6 +55,11 @@ function getDefaultModules() {
       {
         test: /\.(mp4|ogg|svg)$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json',
+        include: '../src/sources/'
       }
     ]
   };
