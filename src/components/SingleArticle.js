@@ -8,18 +8,20 @@ export default class SingleArticle extends React.Component {
 			float: 'right',
 			color: 'lightblue'
 		},
-		authorClass = {
-			color: 'red'
-		},
-		titleStyle = {
-			textAlign: 'center'
-		}
-		
+			authorClass = {
+				color: 'red'
+			},
+			titleStyle = {
+				textAlign: 'center'
+			}
+			function createMarkUp(){
+				return {__html: a.content}
+			}
 		return (
 			<div className="col-md-10">
 				<h2 style={titleStyle}>{a.title}</h2>
-				<span style = {authorClass}>{a.author}</span>  <span style={dateClass}>{a.date}</span>
-				<p>{a.content}</p>
+				<span style={authorClass}>{a.author}</span>  <span style={dateClass}>{a.date}</span>
+				<p dangerouslySetInnerHTML={createMarkUp()}></p>
 			</div>
 		)
 	}

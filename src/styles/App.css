@@ -1,6 +1,6 @@
 /* Base Application Styles */
  body{
-  
+    font-family: Microsoft YaHei;
     margin:0;
     padding:0;
  }
@@ -22,6 +22,7 @@ a:hover {
  }
 
  .article p {
+     word-wrap:break-word;
     position:relative;
     line-height:1.5em;
     height:4.5em;
@@ -32,7 +33,7 @@ a:hover {
     position:absolute;
     bottom:0;
     right:0;
-    padding: 0 5px;
+    padding: 0 0 0 10px;
 }
 
 .resume .header{
@@ -50,8 +51,9 @@ a:hover {
     background-color: gray;
 }
 .person img {
-    border-radius: 50% ;
+    border-radius: 5px;
     width:40%;
+    height:35%;
     overflow:hidden;
     margin-left:30%;
     margin-top:15%;
@@ -73,11 +75,13 @@ a:hover {
     margin-top:20px;
     margin-bottom:10px;
     text-align:center;
+    border-bottom: 3px solid transparent;
 }
 
-    h2:hover{
+   .skills h2:hover, .aboutme h2:hover{
     border-bottom: 3px solid rgb(29, 157, 116);
 }
+
 .resume .skills {
   
     max-width:700px;
@@ -95,6 +99,7 @@ a:hover {
     padding:4px;
     color:powderblue;
 }
+
 .icon-bars i:hover {
     -webkit-animation-name: slowdown;
     -webkit-animation-duration: 500ms;
@@ -117,7 +122,6 @@ a:hover {
 .skills ul li, .aboutme ul li{
     word-wrap: break-word;
     overflow:hidden;
-    font-family: Microsoft YaHei;
     padding: 8px;
    list-style:none;
 }
@@ -132,4 +136,11 @@ a:hover {
 }
 .skills ul {
     padding-left:0px;
+}
+
+.QR1 {
+ display: none;
+}
+.QR2 {
+ display: none;
 }

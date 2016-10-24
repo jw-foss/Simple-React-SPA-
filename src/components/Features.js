@@ -5,7 +5,7 @@ class Features extends React.Component {
   render() {
     return (
       <div>
-        <h1>Features</h1>
+        <h1>Haven't think about this yet</h1>
       </div>
     );
   }

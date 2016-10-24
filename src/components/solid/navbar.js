@@ -5,15 +5,15 @@ export default class Navbar extends React.Component {
   constructor() {
     super()
     this.state = {
-      collapsed : true
+      collapsed: true
     }
   }
-    handleClick() {
-      
-      const collapsed  = !this.state.collapsed
-      this.setState({collapsed})
+  handleClick() {
 
-    }
+    const collapsed = !this.state.collapsed
+    this.setState({ collapsed })
+
+  }
 
   render() {
     const { collapsed } = this.state
@@ -34,9 +34,9 @@ export default class Navbar extends React.Component {
           </button>
         </div>
         <div className="container-fluid">
-          <div className= {'navbar-collapse ' + navClass } >
+          <div className={'navbar-collapse ' + navClass} >
             <ul className="nav navbar-nav">
-              <li  className={featuresClass} onClick={this.handleClick.bind(this)}><Link to="Features">Features</Link></li>
+              <li className={featuresClass} onClick={this.handleClick.bind(this)}><Link to="Features">Features</Link></li>
               <li className={archivesClass} onClick={this.handleClick.bind(this)}><Link to="Archives">Archives</Link></li>
               <li className={settingsClass} onClick={this.handleClick.bind(this)}><Link to="Settings">Settings</Link></li>
               <li className={resumeClass} onClick={this.handleClick.bind(this)}><Link to="Resume">About Me</Link></li>

@@ -3,21 +3,24 @@ import { Link } from 'react-router';
 
 export default class Article extends React.Component {
     render() {
+        const { code, title, date, content, author } = this.props
         const dateClass = {
-            marginLeft: '20px',
+            float: 'right',
             color: 'lightblue'
         }
 
         const authorClass = {
             color: 'red'
         }
+        function createMarkUp(){
+				return {__html: content}
+			}
         return (
-
             <div>
                 <section className="article">
-                    <h2> <Link to={'archives/' + this.props.code}> {this.props.title}</Link></h2>
-                    <span style={authorClass}>{this.props.author}</span>  <span style={dateClass}>{this.props.date}</span>
-                    <p>{this.props.context}</p>
+                    <h2> <Link to={'archives/' + code}> {title}</Link></h2>
+                    <span style={authorClass}>{author}</span>  <span style={dateClass}>{date}</span>
+                    <p dangerouslySetInnerHTML={createMarkUp()}></p>
                 </section>
             </div>
         )

@@ -7,13 +7,13 @@ class Archives extends React.Component {
 
     return (
       <div>
-        {articles.map((value) => <Article
-          key={value.code}
-          context={value.content}
-          title={value.title}
-          code={value.code}
-          author={value.author}
-          date={value.date} />)}
+        {articles.map((val) => <Article
+          key={val.code}
+          content={val.content}
+          title={val.title}
+          code={val.code}
+          author={val.author}
+          date={val.date} />)}
       </div>
     );
   }

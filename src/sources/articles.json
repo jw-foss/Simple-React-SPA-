@@ -1,51 +1,51 @@
 [
   {
     "code": "1546321748979456",
-    "title": "Artile",
+    "title": "建站日记（I）",
     "author": "Jeremy Wu",
-    "date": "2016-10-20",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quisquam ea aliquam provident aliquid nesciunt quidem dignissimos nobis, nam molestias consequuntur similique cumque dolor accusantium nisi illo obcaecati magnam maiores."
+    "date": "2016-10-15",
+    "content": "学习React中，总想要做一些什么东西来练练手，一直寻思着，于是上youtube看到一个React-Tutorial系列的视频， 受到了启发， 于是便想用React来写一个属于自己的站点。于是便着手做了起来，开始的这段时间，确实对于React的理解还不够深刻，跟着视频作者的讲解，慢慢地理解React。"
   },
   {
     "code": "1546321748979457",
-    "title": "Some Article",
+    "title": "建站日记（II）",
     "author": "Jeremy Wu",
-    "date": "2016-10-20",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas saepe consequatur sed voluptatum, iusto est recusandae delectus odio repellat sapiente tempora amet ratione possimus, repellendus commodi mollitia inccodeunt cupcodeitate molestiae."
+    "date": "2016-10-16",
+    "content": "临近毕业，事务繁多，大家都开始准备简历，我也在匆匆忙忙地在网上看着各种简历怎么写之类的文章， 受到了@<a href=\"http://115.159.181.217\" target=\"_blank\">杰哥</a>的启发，为什么不能在自己的网站里面加入自己的介绍呢，也算是一种简历的形式，晚上准备睡觉的时候在脑子里设计自我介绍页面的结构，样式等等，也结合了一些自己觉得很好看的元素加入了进去，准备好样稿，明天开搞。"
   },
   {
     "code": "1546321748979458",
-    "title": "Another Article",
+    "title": "建站日记（III）",
     "author": "Jeremy Wu",
-    "date": "2016-10-20",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, ullam! Illo, quo. Aliquam modi nisi dicta consequuntur, provcodeent, a odio deleniti sunt animi fuga! Voluptas dolor repellat saepe sint voluptatum!"
+    "date": "2016-10-18",
+    "content": "嗯。。忙着处理一些毕业相关的事情， 昨天没来得及弄， 闲着的时候也在想着给这个网站增加一些色彩， 比如说一些有趣的小组件， 总体的架子总算是搭好了， 今天把服务器从WINDOWS SERVER 2012 改成了 CentOS7.0， 感觉命令行对我来说实在是还是有那么一点点陌生，暂时用着nginx， 打算把功能写齐全之后， 迁移到<a href=\"http://nodejs.org\" target=\"_blank\">Node.JS</a>上， 毕竟个人还是很喜欢Node.JS的, express或者koa2的选择， 还是一个小问题， 不过现在还不需要去担心这个问题。 对于后端的知识还是掌握的比较少， 得多补补才行。"
   },
   {
     "code": "1546321748979459",
-    "title": "Article #4",
+    "title": "建站日记（IV）",
     "author": "Jeremy Wu",
-    "date": "2016-10-20",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus suscipit vitae enim iusto molestiae asperiores, quae quisquam minus dignissimos harum vero, doloribus nisi architecto dolorum. Sint cumque quae deserunt, voluptatum."
+    "date": "2016-10-19",
+    "content": "今天在修改外观，添加了一点点交互的效果， 也顺便把那些不常用的知识复习了一下， 加深了对‘用则进，不用则废’这句话的理解， 一些偏远的知识虽是很少能用到， 还是要多多的去温习，使用才行， 就像猴子掰玉米，一样拣一个落一个， 是无法技术水平上提高的。 离成为高手， 还很遥远， 还得多多加强。（ps： 并不是鸡汤= = ） "
   },
   {
     "code": "1546321748979460",
-    "title": "Article #5",
+    "title": "建站日记（V）",
     "author": "Jeremy Wu",
-    "date": "2016-10-20",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde accusantium saepe sit neque magnam eveniet exercitationem maiores ex corporis assumenda, non tempora. Beatae qui amet placeat ipsam perspiciatis, consectetur, necessitatibus."
+    "date": "2016-10-21",
+    "content": "着手进行一些功能性的开发， 被杰哥无情指出写的组件0分之后感觉受到了一波打击。 不过想来也是对的， 因为组件里仅仅有模板，而没有功能性的东西，太缺少了。添加了一部分事件元素吧。不过具体的功能其实倒没有想好， 做这个网站的目的呢， 也只是为了能够分享一下自己的心得， 自己还比较缺乏创意吧，希望未来不久能在生活里得到一些灵感， 把这个完完全全属于自己的小站， 做得更好一点。 "
   },
   {
     "code": "1546321748979461",
-    "title": "Article #6",
+    "title": "建站日记（VI）",
     "author": "Jeremy Wu",
-    "date": "2016-10-20",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam quam quaerat dolor distinctio quas ab iusto ipsum mollitia odit praesentium hic error nisi veniam amet atque, dicta inventore cupcodeitate?"
+    "date": "2016-10-22",
+    "content": "基本的小架子都搭建完成， 接下来就是着手用 <a href=\"http://expressjs.com/\" target=\"_blank\">Express</a> 和 <a href=\"https://www.mongodb.com/\" target=\"_blank\">MongoDB</a>作为博客的整个后台支持，数据库， 实现站长的管理， 发布、修改、删除博客这些内容（可以支持MarkDown语法）， 近期的打算就是专注在这上面， 如果在实现这个目标的过程中， 发现有适合引入的一些小创意， 也会想办法添加进来，让这个网站看上去更有血有肉一点吧。也想通过一些API来调取一些数据， 来增色一下， 显得不是那么的单调。 如果有谁偶然发现这个网站了， 有好的创意可以交流一下欢迎讨论。"
   },
   {
     "code": "1546321748979462",
-    "title": "One More Article",
+    "title": "建站日记（VII）",
     "author": "Jeremy Wu",
-    "date": "2016-10-20",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto autem quidem tempore enim ratione maxime cumque dolorem deleniti aliquam distinctio. Autem in sed nostrum, a eius laudantium illo accusantium vero."
+    "date": "2016-10-24",
+    "content": "把代码上传Github做保管， 顺带学习了一下Git的一些使用用法。受益良多。"
   }
 ]
