@@ -1,7 +1,7 @@
-import React from 'react'
-import Navbar from './solid/navbar'
-import Loading from './Loading'
-
+import React from 'react';
+import Navbar from './solid/navbar';
+//loadingbar
+import Loading from './Loading';
 class Main extends React.Component {
 	constructor() {
 		super()
@@ -9,8 +9,9 @@ class Main extends React.Component {
 			Loading: true
 		}
 	}
+	//after componentMounted
 	componentDidMount() {
-		const { Loading } = this.state
+		const { Loading } = this.state;
 		setTimeout(function () {
 			this.setState({ Loading: !Loading })
 		}.bind(this), 2000)

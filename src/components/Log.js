@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-export default class Article extends React.Component {
+export default class Log extends React.Component {
     render() {
         const { code, title, date, content, author } = this.props
         const dateClass = {
@@ -19,7 +19,7 @@ export default class Article extends React.Component {
         return (
             <div>
                 <section className="article">
-                    <h2> <Link to={'archives/' + code}> {title}</Link></h2>
+                    <h2> <Link to={'logs/' + code}><span>{title}</span></Link></h2>
                     <span style={authorClass}>{author}</span>  <span style={dateClass}>{date}</span>
                     <p dangerouslySetInnerHTML={createMarkUp()}></p>
                 </section>

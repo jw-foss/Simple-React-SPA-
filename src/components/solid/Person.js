@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default class Person extends React.Component {
+    //handleMouseEnter
     handleEnter(key) {
         const qq = this.refs.qq
         const weixin = this.refs.weixin
@@ -10,20 +11,21 @@ export default class Person extends React.Component {
             weixin.style.display = 'inline-block'
         }
     }
+    //handleMouseLeave
     handleLeave(key) {
         const qq = this.refs.qq
         const weixin = this.refs.weixin
-        if (key ===1) {
-        qq.style.display = 'none'
+        if (key === 1) {
+            qq.style.display = 'none'
         } else {
-        weixin.style.display = 'none'
+            weixin.style.display = 'none'
         }
     }
     render() {
         return (
             <div className="person">
                 <div className="img">
-                    <img src="../images/jere.jpg" alt="" /> <br />
+                    <img src="../images/jere.JPG" alt="" /> <br />
                     <div className="icon-bars">
                         <br />
                         <i className='fa fa-weibo' aria-hidden="true"></i>
@@ -39,8 +41,8 @@ export default class Person extends React.Component {
                         <i className='fa fa-linkedin' aria-hidden="true"></i>
                     </div>
                     <div className="QR-code">
-                        <img src="../images/QR1.jpg" alt="" className="QR1" ref={'qq'} />
-                        <img src="../images/QR2.jpg" alt="" className="QR2" ref={'weixin'} />
+                        <img src="../images/QR1.JPG" alt="" className="QR1" ref={'qq'} />
+                        <img src="../images/QR2.JPG" alt="" className="QR2" ref={'weixin'} />
                     </div>
                 </div>
             </div>

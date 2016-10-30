@@ -1,4 +1,5 @@
 import React from 'react';
+//import JSON sources from articles
 import articles from '../sources/articles'
 
 export default class SingleArticle extends React.Component {
@@ -14,9 +15,10 @@ export default class SingleArticle extends React.Component {
 			titleStyle = {
 				textAlign: 'center'
 			}
-			function createMarkUp(){
-				return {__html: a.content}
-			}
+		//inser raw html MarkUps
+		function createMarkUp() {
+			return { __html: a.content }
+		}
 		return (
 			<div className="col-md-10">
 				<h2 style={titleStyle}>{a.title}</h2>

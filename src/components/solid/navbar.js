@@ -20,7 +20,7 @@ export default class Navbar extends React.Component {
     const { location } = this.props
     const featuresClass = location.pathname === '/' ? 'active' : ''
     const archivesClass = location.pathname.match(/^\/Archives/) ? 'active' : ''
-    const settingsClass = location.pathname.match(/^\/Settings/) ? 'active' : ''
+
     const resumeClass = location.pathname.match(/^\/Resume/) ? 'active' : ''
     const navClass = collapsed ? 'collapse' : ''
     return (
@@ -36,9 +36,8 @@ export default class Navbar extends React.Component {
         <div className="container-fluid">
           <div className={'navbar-collapse ' + navClass} >
             <ul className="nav navbar-nav">
-              <li className={featuresClass} onClick={this.handleClick.bind(this)}><Link to="Features">Features</Link></li>
-              <li className={archivesClass} onClick={this.handleClick.bind(this)}><Link to="Archives">Archives</Link></li>
-              <li className={settingsClass} onClick={this.handleClick.bind(this)}><Link to="Settings">Settings</Link></li>
+              <li className={featuresClass} onClick={this.handleClick.bind(this)}><Link to="Logs">Blogs</Link></li>
+              <li className={archivesClass} onClick={this.handleClick.bind(this)}><Link to="Archives">Build Journal</Link></li>
               <li className={resumeClass} onClick={this.handleClick.bind(this)}><Link to="Resume">About Me</Link></li>
             </ul>
           </div>
