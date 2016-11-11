@@ -1,6 +1,7 @@
 import React from 'react';
 import getData from './getData';
 import { Link } from 'react-router';
+import marked from 'marked';
 export default class SingleLog extends React.Component {
 	constructor() {
 		super();
@@ -35,18 +36,19 @@ export default class SingleLog extends React.Component {
 			}
 		//inser raw html MarkUps
 		function createMarkUp() {
-			return { __html: log.content }
+			let rawMarked = marked(log.content, {
+				sanitize: true
+			});
+			return { __html: rawMarked }
 		}
-		if(data.toString() !== '') {
+		if (data.toString() !== '') {
 
 			for (let i = 0; i < len; i++) {
 				if ((data[i].code).toString() === this.props.params.id) {
 					curIndex = i;
-					console.log('curIndex: ', curIndex)
 				}
 			}
 			log = data[curIndex] || {};
-			console.log('log: ', log)
 			if (curIndex) {
 				if (curIndex + 1 < len) {
 					return (
@@ -98,7 +100,7 @@ export default class SingleLog extends React.Component {
 		} else {
 			return (
 				<div>
-				  Data not catched
+					Data not catched
 				</div>
 			)
 		}

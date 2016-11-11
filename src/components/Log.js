@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-
+import marked from 'marked';
 export default class Log extends React.Component {
     render() {
         const { code, title, date, content, author } = this.props
@@ -14,7 +14,10 @@ export default class Log extends React.Component {
         }
         //insert raw html MarkUps
         function createMarkUp() {
-            return { __html: content }
+            let rawMarked = marked(content, {
+                sanitize: true
+            });
+            return { __html: rawMarked }
         }
         return (
             <div>
