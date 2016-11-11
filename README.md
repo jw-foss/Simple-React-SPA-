@@ -2,7 +2,7 @@
 
 ###New Feature
 **11/11/2016** <br/><br/>
-add both `previous & next button` in the blog page
+add both `previous & next button` in the blog page <br/>
 add `MarkDown parser` now supporting markdown grammar
 
 ##
