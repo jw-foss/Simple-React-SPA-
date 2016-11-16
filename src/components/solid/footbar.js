@@ -17,7 +17,7 @@ export default class Footbar extends React.Component {
 			color: 'white'
 		};
 		return (
-			<div style={fatherContainer}>
+			<div className="ant-layout-footer">
 				<hr />
 				<div>
 					<div>

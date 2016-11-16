@@ -144,3 +144,52 @@ a:hover {
 .QR2 {
  display: none;
 }
+.ant-menu {
+ line-height:20px;
+ text-align: center;
+}
+p {
+    font-size: 14px;
+    word-spacing: 1px;
+}
+.article-wrapper {
+    padding:20px;
+    margin-top: 50px;
+    border-radius: 4px;
+    border: thin rgba(93, 78, 78, 0.1) solid;
+}
+.article-wrapper:hover{
+        animation: slideIn 500ms;
+        -webkit-animation: slideIn 500ms; 
+        box-shadow: 0 2px 7px rgba(0, 0, 0, .2);
+}
+@keyframes slideIn {
+    from {
+        box-shadow: none;
+    }
+    to {
+        box-shadow: 0 2px 7px rgba(0, 0, 0, .2);
+    }
+}
+.pager {
+    margin-top: 10px;
+}
+.pager li {
+    border: thin solid rgba(0,0,0, .2);
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 30px;
+}
+.pager li a {
+    color:black;
+}
+
+.pager li a:hover {
+    color:#2db7f5;
+}
+.next {
+    float: right;
+}
+.previous{
+    float: left;
+}

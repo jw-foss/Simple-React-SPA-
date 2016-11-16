@@ -1,7 +1,8 @@
-import React from 'react';
-import getData from './getData';
-import { Link } from 'react-router';
-import marked from 'marked';
+import React from 'react'
+import getData from './getData'
+import { Link } from 'react-router'
+import marked from 'marked'
+import { Row, Col } from 'antd'
 export default class SingleLog extends React.Component {
 	constructor() {
 		super();
@@ -9,7 +10,6 @@ export default class SingleLog extends React.Component {
 			data: []
 		}
 	}
-
 	componentDidMount() {
 
 		getData(function (data) {
@@ -21,6 +21,7 @@ export default class SingleLog extends React.Component {
 	}
 	//data fetching function
 	render() {
+		//catch data
 		const { data } = this.state
 		const len = data.length
 		let curIndex, log;
@@ -35,14 +36,14 @@ export default class SingleLog extends React.Component {
 				textAlign: 'center'
 			}
 		//inser raw html MarkUps
-		function createMarkUp() {
+		function createMarkUp(log) {
 			let rawMarked = marked(log.content, {
 				sanitize: true
 			});
 			return { __html: rawMarked }
 		}
+		//while data cathed
 		if (data.toString() !== '') {
-
 			for (let i = 0; i < len; i++) {
 				if ((data[i].code).toString() === this.props.params.id) {
 					curIndex = i;
@@ -50,54 +51,76 @@ export default class SingleLog extends React.Component {
 			}
 			log = data[curIndex] || {};
 			if (curIndex) {
+				//case: not last page
 				if (curIndex + 1 < len) {
 					return (
-						<div className="col-md-10">
-							<h2 style={titleStyle}>{log.title}</h2>
-							<span style={authorClass}>{log.author}</span>
-							<span style={dateClass}>{log.date}</span>
-							<p dangerouslySetInnerHTML={createMarkUp()}></p>
-							<ul className="pager">
-								<li className="previous">
-									<Link to={'logs/' + data[curIndex - 1].code}>&larr; Newer</Link>
-								</li>
-								<li className="next">
-									<Link to={'logs/' + data[curIndex + 1].code}>Older &rarr;</Link>
-								</li>
-							</ul>
-						</div>
+						<Row>
+							<Col span={14} offset={4}>
+								<div className="article-wrapper">
+									<h2 style={titleStyle}>{log.title}</h2>
+									<p style={{ margin: '20px 0' }}>
+										<span style={authorClass}>{log.author}</span>
+										<span style={dateClass}>{log.date}</span>
+									</p>
+									<p dangerouslySetInnerHTML={createMarkUp(log)}></p>
+									<ul className="pager">
+										<li className="previous">
+											<Link to={'logs/' + data[curIndex - 1].code}> Newer</Link>
+										</li>
+										<li className="next">
+											<Link to={'logs/' + data[curIndex + 1].code}> Older</Link>
+										</li>
+									</ul>
+								</div>
+							</Col>
+						</Row>
 					)
 				} else {
+					//case: last page
 					return (
-						<div className="col-md-10">
-							<h2 style={titleStyle}>{log.title}</h2>
-							<span style={authorClass}>{log.author}</span>
-							<span style={dateClass}>{log.date}</span>
-							<p dangerouslySetInnerHTML={createMarkUp()}></p>
-							<ul className="pager">
-								<li className="previous">
-									<Link to={'logs/' + data[curIndex - 1].code}>&larr; Newer</Link>
-								</li>
-							</ul>
-						</div>
+						<Row>
+							<Col span={14} offset={4}>
+								<div className="article-wrapper">
+									<h2 style={titleStyle}>{log.title}</h2>
+									<p style={{ margin: '20px 0' }}>
+										<span style={authorClass}>{log.author}</span>
+										<span style={dateClass}>{log.date}</span>
+									</p>
+									<p dangerouslySetInnerHTML={createMarkUp(log)}></p>
+									<ul className="pager">
+										<li className="previous">
+											<Link to={'logs/' + data[curIndex - 1].code}> Newer</Link>
+										</li>
+									</ul>
+								</div>
+							</Col>
+						</Row>
 					)
 				}
 			} else {
+				//case: first page
 				return (
-					<div className="col-md-10">
-						<h2 style={titleStyle}>{log.title}</h2>
-						<span style={authorClass}>{log.author}</span>
-						<span style={dateClass}>{log.date}</span>
-						<p dangerouslySetInnerHTML={createMarkUp()}></p>
-						<ul className="pager">
-							<li className="next">
-								<Link to={'logs/' + data[curIndex + 1].code}>Older &rarr;</Link>
-							</li>
-						</ul>
-					</div>
+					<Row>
+						<Col span={14} offset={4}>
+							<div className="article-wrapper">
+								<h2 style={titleStyle}>{log.title}</h2>
+								<p style={{ margin: '20px 0' }}>
+									<span style={authorClass}>{log.author}</span>
+									<span style={dateClass}>{log.date}</span>
+								</p>
+								<p dangerouslySetInnerHTML={createMarkUp(log)}></p>
+								<ul className="pager">
+									<li className="next">
+										<Link to={'logs/' + data[curIndex + 1].code}> Older</Link>
+									</li>
+								</ul>
+							</div>
+						</Col>
+					</Row>
 				)
 			}
 		} else {
+			//case: data not fetched
 			return (
 				<div>
 					Data not catched

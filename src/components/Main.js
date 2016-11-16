@@ -1,5 +1,5 @@
-import React from 'react';
-import Navbar from './solid/navbar';
+import React from 'react'
+import Navbar from './solid/navbar'
 //loadingbar
 import Loading from './Loading';
 class Main extends React.Component {
@@ -27,7 +27,7 @@ class Main extends React.Component {
 					<Navbar location={this.props.location} />
 					<div className="container-fluid">
 						<div className="row">
-							<div className="col-lg-12">
+							<div>
 								{this.props.children}
 							</div>
 						</div>
