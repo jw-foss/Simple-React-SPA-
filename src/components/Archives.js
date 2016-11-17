@@ -9,12 +9,15 @@ class Archives extends React.Component {
     }
     return (
       <div>
-        {articles.map((val) =>
+        {articles.map((val, i) =>
           <Card title={<Link to={'archives/' + val.code}>{val.title}</Link>}
             extra={val.author}
-            style={{ width: 600,
+            style={{
+              width: 600,
               margin: '15px auto',
-            height: '180' }}>
+              height: '180'
+            }}
+            key={i}>
             <p dangerouslySetInnerHTML={createMarkUp(val)}></p>
           </Card>
         )}

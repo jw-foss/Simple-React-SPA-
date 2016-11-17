@@ -1,7 +1,6 @@
 import React from 'react'
 import getData from './getData'
 import { Link } from 'react-router'
-import marked from 'marked'
 import { Row, Col } from 'antd'
 export default class SingleLog extends React.Component {
 	constructor() {
@@ -11,9 +10,7 @@ export default class SingleLog extends React.Component {
 		}
 	}
 	componentDidMount() {
-
-		getData(function (data) {
-
+		getData('/articles/all', '', function (data) {
 			this.setState({
 				data: data
 			})
@@ -37,10 +34,7 @@ export default class SingleLog extends React.Component {
 			}
 		//inser raw html MarkUps
 		function createMarkUp(log) {
-			let rawMarked = marked(log.content, {
-				sanitize: true
-			});
-			return { __html: rawMarked }
+			return { __html: log.content }
 		}
 		//while data cathed
 		if (data.toString() !== '') {
