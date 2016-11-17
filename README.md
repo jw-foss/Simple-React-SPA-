@@ -1,7 +1,12 @@
 #Simple-React-SPA
 
 ###New Feature
-**11/11/2016** <br/><br/>
+***Nov/17th/2016***
+
+ font end `Pagination` done
+
+
+***Nov/11st/2016*** <br/><br/>
 add both `previous & next button` in the blog page
 
 ##
